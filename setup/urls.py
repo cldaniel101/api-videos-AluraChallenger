@@ -11,4 +11,5 @@ router.register('categorias', CategoriasViewSet, basename='Categorias')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('categorias/<int:pk>/videos/', ListaVideosPorCategoria.as_view()),
 ]
